@@ -25,10 +25,13 @@ public class Activity {
     @Column(updatable = false)
     private String uuid; // создается только один раз с помощью триггера в БД
 
-    @OneToOne
-    @MapsId
-    @JoinColumn(name = "user_id", referencedColumnName = "id")
-    private User user;
+//    @OneToOne
+//    @MapsId
+//    @JoinColumn(name = "user_id", referencedColumnName = "id")
+//    private User user;
+
+    @Column(name = "user_id")
+    private Long userId;
 
 
 }

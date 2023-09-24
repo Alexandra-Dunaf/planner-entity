@@ -26,11 +26,14 @@ public class Stat { // в этой таблице всего 1 запись, к�
     @Column(name = "uncompleted_total", updatable = false)
     private Long uncompletedTotal;
 
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    @OneToOne(fetch = FetchType.LAZY)
-    @MapsId
-    @JoinColumn(name = "user_id", referencedColumnName = "id")
-    private User user;
+//    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+//    @OneToOne(fetch = FetchType.LAZY)
+//    @MapsId
+//    @JoinColumn(name = "user_id", referencedColumnName = "id")
+//    private User user;
+
+    @Column(name = "user_id")
+    private Long userId;
 
 
 }
